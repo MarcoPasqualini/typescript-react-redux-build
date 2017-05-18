@@ -1,0 +1,39 @@
+module.exports = function(config) {
+  config.set({
+    basePath: '../',
+
+    files: [
+      { pattern: 'test/**/*.tsx' },
+      { pattern: 'source/**/*.tsx' },
+    ],
+
+    preprocessors: {
+      '**/*.ts': ['karma-typescript'],
+      '**/*.tsx': ['karma-typescript']
+    },
+
+    frameworks: ['jasmine', 'sinon', 'karma-typescript'],
+    reporters: ['progress', 'karma-typescript'],
+
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+
+    browsers: ['PhantomJS'],
+    singleRun: false,
+    concurrency: Infinity,
+
+    karmaTypescriptConfig: {
+      bundlerOptions: {
+        exclude: [
+          'react-addons-test-utils',
+          'react/addons',
+          'react/lib/ExecutionEnvironment',
+          'react/lib/ReactContext'
+        ],
+        entrypoints: /.*test\/.*\.(ts|tsx)$/,
+      }
+    }
+  })
+};
