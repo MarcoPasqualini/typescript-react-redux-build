@@ -10,3 +10,4 @@ This is a list of all commands available with this build system.
 | doc           | uses typedoc to produce automatic documentation from the source code       |
 | clean         | cleans the project folder                                                  |
 | reset         | as above, but also removes all installed dependecies                       |
+| postinstall   | cleans some test and presentation folders                                  |

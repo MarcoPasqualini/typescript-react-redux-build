@@ -10,7 +10,8 @@
     "test": "karma start config/karma.js",
     "doc": "typedoc --name TRRBExample --mode file --tsconfig ./config/tsdoc.json --excludeExternals --readme none --out ./documentation ./source",
     "clean": "rimraf coverage distribution/* documentation/*",
-    "reset": "npm run clean & rimraf typings node_modules"
+    "reset": "npm run clean & rimraf typings node_modules",
+    "postinstall": "rimraf trrb-docs source/* test/*"
   },
   "dependencies": {
     "material-ui": "^0.18.1",

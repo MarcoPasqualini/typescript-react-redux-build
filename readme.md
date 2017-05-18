@@ -11,7 +11,7 @@ A list of all packages installed is [here](trrb-docs/packages.md)
 
 # How to use
 - Run the `npm install` command to install all dependencies;
-- Delete the content of the source/test folders which currently contains some test code;
+- Run the `npm run postinstall` command to clean some folders related to only this repository
 - Review the other command in the package.json file.
 
 A list of all command is available [here](trrb-docs/commands.md)
