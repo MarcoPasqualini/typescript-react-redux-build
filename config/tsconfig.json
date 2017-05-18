@@ -3,7 +3,8 @@
     "jsx": "react",
     "target": "es5",
     "noImplicitAny": true,
-    "removeComments": true
+    "removeComments": true,
+    "typeRoots": [ "../node_modules/@types"]
   },
   "awesomeTypescriptLoaderOptions": {
     "silent": true

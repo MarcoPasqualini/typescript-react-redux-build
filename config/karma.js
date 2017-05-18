@@ -3,6 +3,8 @@ module.exports = function(config) {
     basePath: '../',
 
     files: [
+      { pattern: 'test/**/*.ts' },
+      { pattern: 'source/**/*.ts' },
       { pattern: 'test/**/*.tsx' },
       { pattern: 'source/**/*.tsx' },
     ],

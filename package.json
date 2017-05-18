@@ -2,13 +2,13 @@
   "name": "typescript-react-redux-build",
   "description": "build system boilerplate typescript react redux material karma jasmine",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --progress --config config/webpack.js",
     "start-network": "webpack-dev-server --inline --hot --progress --host 0.0.0.0 --config config/webpack.js",
     "build": "webpack -p --progress --config config/webpack.js",
     "test": "karma start config/karma.js",
-    "doc": "typedoc --name TRRBExample --out ./documentation --target ES5 --module commonjs --tsconfig ./config/tsdoc.json ./source",
+    "doc": "typedoc --name TRRBExample --mode file --tsconfig ./config/tsdoc.json --excludeExternals --readme none --out ./documentation ./source",
     "clean": "rimraf coverage distribution/* documentation/*",
     "reset": "npm run clean & rimraf typings node_modules"
   },
